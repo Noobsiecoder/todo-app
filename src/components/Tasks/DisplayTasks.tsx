@@ -30,7 +30,11 @@ const TaskComponent = ({
         taskName={taskName}
         isCompleted={isTaskCompleted}
       />
-      <span className="font-medium break-all md:text-lg font-montserrat text-gray-750">
+      <span
+        className={`font-medium break-all md:text-lg font-montserrat text-gray-750 ${
+          isTaskCompleted ? "line-through" : ""
+        } `}
+      >
         {taskName}
       </span>
     </div>
